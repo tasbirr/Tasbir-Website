@@ -1,0 +1,255 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    background-image: url('images/back2.png'); /* Set the whole background to back2.png */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(187, 78, 165, 0.632);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+.navbar.shrink {
+    padding: 10px 20px;
+}
+
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a, .tasbir-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+nav ul li a:hover, .tasbir-logo:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.tasbir-logo {
+    font-size: 24px;
+    transition: font-size 0.3s;
+}
+
+.right-links {
+    display: flex;
+    align-items: center;
+    margin-right: 40px; /* Adjust as needed to move it away from the edge */
+}
+
+.right-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.right-links a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.parallax-section {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.parallax-content h1, .parallax-content p {
+    margin: 0;
+    padding: 20px;
+}
+
+.title-container {
+    animation: pop-up 1s ease-out;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: white;
+    opacity: 0;
+    animation: fade-in 1s ease-out 1s forwards;
+}
+
+.linkedin {
+    margin-top: 10px;
+}
+
+.subtitle a img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.avatar img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+@keyframes pop-up {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content {
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+}
+
+.content h1 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.about-me {
+    font-size: 23px;
+    line-height: 1.6;
+    min-height: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px; /* Move the about-me content up */
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background-color: rgba(255, 161, 247, 0.6);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    width: 100%;
+    text-align: left;
+    opacity: 0;
+}
+
+.timeline-item h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.timeline-item p {
+    margin: 0;
+}
+
+.timeline-item.more a {
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(255, 161, 247, 0.6);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.timeline-item.more a:hover {
+    background-color: rgba(255, 161, 247, 0.6);
+}
+.education-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.education-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.education-item img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.education-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.education-item p {
+    font-size: 16px;
+    line-height: 1;
+}
